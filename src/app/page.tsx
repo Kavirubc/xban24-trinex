@@ -128,8 +128,9 @@ export default function Chat() {
             )}
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="w-full max-w-3xl flex flex-col items-center p-4 bg-white mt-4 fixed bottom-0 pb-10">
-          <div className="w-full flex px-4 items-center">
+<div className='flex flex-col justify-center items-center'>
+        <form onSubmit={handleSubmit} className="w-full max-w-3xl flex flex-col items-center content-center p-4 bg-white mt-4 fixed bottom-0 pb-10">
+          <div className="w-full flex flex-row justify-center content-center px-4 items-center">
             <input
               ref={inputRef}
               disabled={status !== 'awaiting_message'}
@@ -159,6 +160,7 @@ export default function Chat() {
             <sup>*</sup>Please do not share any private information with the chatbot.
           </p>
         </form>
+        </div>
       </div>
     </>
   );
