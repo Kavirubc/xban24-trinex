@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Xban 2024 by Bandaranayake College Gampaha",
-  description: "By BCSC",
+  description: "By BCSS",
 };
 
 export default function RootLayout({

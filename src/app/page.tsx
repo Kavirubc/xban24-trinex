@@ -79,11 +79,11 @@ export default function Chat() {
 
   if (!isLoaded || isLoading) {
     return <div className='min-h-screen flex flex-col text-center justify-center items-center content-center'>
-      <h1 className='text-4xl mb-5'>
-        BCSC
+      <h1 className='text-4xl mb-5 font-bold'>
+        BCSS
       </h1>
-      <p>
-        Trinex Loading...
+      <p className='text-2xl'>
+        <span className=' font-bold bg-black text-white'>TRINEX</span> Loading...
       </p>
     </div>;
   }
