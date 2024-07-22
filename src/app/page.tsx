@@ -57,18 +57,35 @@ export default function Chat() {
   };
 
   const prompts = [
-    { text: "Could you share more about SEDS Sri Lanka and its mission in the space community?" },
-    { text: "What exactly is the Space Apps Challenge, and how can one participate?" },
-    { text: "How do I begin exploring opportunities in space exploration?" },
-    { text: "Where can I find contact information to get involved or learn more?" },
+    { text: "Could you share more about Bandaranayake College Gampaha?" },
+    { text: "What exactly is the Xban 2024?" },
+    { text: "Tell me what can I find in Xban 2024?" },
+    { text: "Tell me more about you Trinex.." },
   ];
 
   function handleCard(text: string) {
     handleInputChange({ target: { value: text } } as React.ChangeEvent<HTMLInputElement>);
   }
 
-  if (!isLoaded) {
-    return <div>Loading...</div>;
+  const [isLoading, setIsLoading] = useState(true);
+
+  // UseEffect to set a delay for loading
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 seconds delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isLoaded || isLoading) {
+    return <div className='min-h-screen flex flex-col text-center justify-center items-center content-center'>
+      <h1 className='text-4xl mb-5'>
+        BCSC
+      </h1>
+      <p>
+        Trinex Loading...
+      </p>
+    </div>;
   }
 
   return (
@@ -87,7 +104,7 @@ export default function Chat() {
             <>
               <div>
                 <h1 className="text-3xl font-bold">Hey {firstName}!</h1>
-                <p className="text-lg mt-4">Welcome back, superstar! 🌟 How&apos;s everything going? Ready to dive into Space apps challenge 2024</p>
+                <p className="text-lg mt-4">Welcome to Xban 2024 🌟 I&apos;m trinex and here to tell you more about Xban 2024!</p>
               </div>
               <div className="pt-48 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                 {prompts.map((prompt, index) => (
