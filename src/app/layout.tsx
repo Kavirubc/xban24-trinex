@@ -9,8 +9,8 @@ import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@c
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Xban 2024 by Banda College Gampaha",
-  description: "By BCSC",
+  title: "Xban 2024 by Bandaranayake College Gampaha",
+  description: "By BCSS",
 };
 
 export default function RootLayout({

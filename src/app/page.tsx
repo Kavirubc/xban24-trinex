@@ -79,11 +79,11 @@ export default function Chat() {
 
   if (!isLoaded || isLoading) {
     return <div className='min-h-screen flex flex-col text-center justify-center items-center content-center'>
-      <h1 className='text-4xl mb-5'>
-        BCSC
+      <h1 className='text-4xl mb-5 font-bold'>
+        BCSS
       </h1>
-      <p>
-        Trinex Loading...
+      <p className='text-2xl'>
+        <span className=' font-bold bg-black text-white'>TRINEX</span> Loading...
       </p>
     </div>;
   }
@@ -100,12 +100,14 @@ export default function Chat() {
               </span>
             </div>
           )}
-          {showInfo && (
+          
             <>
               <div>
                 <h1 className="text-3xl font-bold">Hey {firstName}!</h1>
                 <p className="text-lg mt-4">Welcome to Xban 2024 🌟 I&apos;m trinex and here to tell you more about Xban 2024!</p>
               </div>
+              <hr />
+            {showInfo && (
               <div className="pt-48 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
                 {prompts.map((prompt, index) => (
                   <button
@@ -117,8 +119,9 @@ export default function Chat() {
                   </button>
                 ))}
               </div>
+            )}
             </>
-          )}
+          
           <div className="flex-grow overflow-auto space-y-4">
             {messages.map((m: Message) => (
               <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
